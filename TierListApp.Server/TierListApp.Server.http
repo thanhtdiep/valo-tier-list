@@ -1,0 +1,6 @@
+@TierListApp.Server_HostAddress = http://localhost:5184
+
+GET {{TierListApp.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
