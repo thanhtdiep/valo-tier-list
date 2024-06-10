@@ -1,10 +1,10 @@
 import React from 'react';
-import logo from './vite.svg';
+//import logo from 'public/vite.svg';
 
 const Header: React.FC = () => {
     return (
         <header>
-            <img src={logo} alt="Logo" />
+            <img src="/image.jpg" alt="Logo" />
         </header>
     );
 }

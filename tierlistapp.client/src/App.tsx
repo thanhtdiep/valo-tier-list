@@ -17,7 +17,7 @@ function App() {
         getTeams();
     }, []);
 
-    const contents = teams === undefined
+    const selections = !teams
         ? <p>Loading... </p>
         :
         <div>
@@ -33,13 +33,14 @@ function App() {
 
     return (
         <div>
-            <h1 id="tabelLabel">Team list</h1>
-            {contents}
+            <h1 id="tabelLabel" className="">Team list</h1>
+            {selections}
         </div>
     );
 
     async function getTeams() {
-        const response = await axios.get('teams');
+        const response = await axios.get('https://localhost:7069/teams');
+        console.log(response.data)
         setTeams(response.data);
     }
 }
